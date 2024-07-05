@@ -355,10 +355,10 @@
     growthChart.render();
   }
 
-  // Profit Report Line Chart
+  // Evaluation Report Line Chart
   // --------------------------------------------------------------------
-  const profileReportChartEl = document.querySelector('#profileReportChart'),
-    profileReportChartConfig = {
+  const evalReportChartEl = document.querySelector('#evalReportChart'),
+    evalReportChartConfig = {
       chart: {
         height: 80,
         // width: 175,
@@ -371,7 +371,7 @@
           top: 10,
           left: 5,
           blur: 3,
-          color: config.colors.warning,
+          color: config.colors.success,
           opacity: 0.15
         },
         sparkline: {
@@ -384,7 +384,7 @@
           right: 8
         }
       },
-      colors: [config.colors.warning],
+      colors: [config.colors.success],
       dataLabels: {
         enabled: false
       },
@@ -394,7 +394,7 @@
       },
       series: [
         {
-          data: [110, 270, 145, 245, 205, 285]
+          data: [1, 1, 5, 2, 7, 5]
         }
       ],
       xaxis: {
@@ -413,9 +413,135 @@
         show: false
       }
     };
-  if (typeof profileReportChartEl !== undefined && profileReportChartEl !== null) {
-    const profileReportChart = new ApexCharts(profileReportChartEl, profileReportChartConfig);
-    profileReportChart.render();
+  if (typeof evalReportChartEl !== undefined && evalReportChartEl !== null) {
+    const evalReportChart = new ApexCharts(evalReportChartEl, evalReportChartConfig);
+    evalReportChart.render();
+  }
+
+// Introduction Report Line Chart
+  // --------------------------------------------------------------------
+  const introReportChartEl = document.querySelector('#introReportChart'),
+    introReportChartConfig = {
+      chart: {
+        height: 80,
+        // width: 175,
+        type: 'line',
+        toolbar: {
+          show: false
+        },
+        dropShadow: {
+          enabled: true,
+          top: 10,
+          left: 5,
+          blur: 3,
+          color: config.colors.danger,
+          opacity: 0.15
+        },
+        sparkline: {
+          enabled: true
+        }
+      },
+      grid: {
+        show: false,
+        padding: {
+          right: 8
+        }
+      },
+      colors: [config.colors.danger],
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 5,
+        curve: 'smooth'
+      },
+      series: [
+        {
+          data: [42, 30, 12, 20, 16, 22]
+        }
+      ],
+      xaxis: {
+        show: false,
+        lines: {
+          show: false
+        },
+        labels: {
+          show: false
+        },
+        axisBorder: {
+          show: false
+        }
+      },
+      yaxis: {
+        show: false
+      }
+    };
+  if (typeof introReportChartEl !== undefined && introReportChartEl !== null) {
+    const introReportChart = new ApexCharts(introReportChartEl, introReportChartConfig);
+    introReportChart.render();
+  }
+
+  // Evaluation Report Line Chart
+  // --------------------------------------------------------------------
+  const solicitationReportChartEl = document.querySelector('#solicitationReportChart'),
+    solicitationReportChartConfig = {
+      chart: {
+        height: 80,
+        // width: 175,
+        type: 'line',
+        toolbar: {
+          show: false
+        },
+        dropShadow: {
+          enabled: true,
+          top: 10,
+          left: 5,
+          blur: 3,
+          color: config.colors.success,
+          opacity: 0.15
+        },
+        sparkline: {
+          enabled: true
+        }
+      },
+      grid: {
+        show: false,
+        padding: {
+          right: 8
+        }
+      },
+      colors: [config.colors.success],
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: 5,
+        curve: 'smooth'
+      },
+      series: [
+        {
+          data: [0, 10, 5, 20, 18, 22]
+        }
+      ],
+      xaxis: {
+        show: false,
+        lines: {
+          show: false
+        },
+        labels: {
+          show: false
+        },
+        axisBorder: {
+          show: false
+        }
+      },
+      yaxis: {
+        show: false
+      }
+    };
+  if (typeof solicitationReportChartEl !== undefined && solicitationReportChartEl !== null) {
+    const solicitationReportChart = new ApexCharts(solicitationReportChartEl, solicitationReportChartConfig);
+    solicitationReportChart.render();
   }
 
   // Order Statistics Chart
